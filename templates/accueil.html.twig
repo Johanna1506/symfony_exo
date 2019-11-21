@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+{% block content %}
+        <article>
+            {% for article in articles %}
+               <div class="image_article">
+                 <h1> {{ article.titre }} </h1>
+                 <img src="{{ asset('img/' ~ loop.index ~ '.jpeg') }}" alt="photo" class="resp">
+                 <p> {{ article.content | slice(0, 120)}}</p>
+                   <a href="{{ path('article') }}"><input type="submit" value="Lire plus"></a>
+               </div>
+            {% endfor %}
+        </article>
+{% endblock %}

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <title>{% block title %}{% endblock%}</title>
+    <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+</head>
+<body>
+<header>
+    <ul>
+        <li class="logo"> <a href="{{ path('accueil') }}"><img src="{{ asset('img/globe.png') }}" alt="logo site" class="resp"></a></li>
+        <li><a href="{{ path('accueil') }}">Accueil</a></li>
+        <li><a href="{{ path('article') }}">Article</a></li>
+        <li><a href="{{ path('profil') }}">Profil</a></li>
+        <li><a href="{{ path('contact') }}">Contact</a></li>
+    </ul>
+</header>
+<section>
